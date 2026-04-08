@@ -1,7 +1,7 @@
 {
   "name": "@unruly-software/entity",
   "packageManager": "yarn@3.5.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "description": "A small TypeScript library for modelling domain entities in event-driven systems on top of Zod schemas. Define props and events once, get runtime validation, an atomic mutation lifecycle that rolls back on invariant violations, a journal of domain events, and a `class` you can attach behaviour to.",
