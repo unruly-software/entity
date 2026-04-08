@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmit && microbundle",
+    "build": "tsc --noEmit && microbundle --tsconfig tsconfig.build.json --external node:crypto --globals node:crypto=node:crypto",
     "build:watch": "tsc --noEmit --watch",
     "clean": "rm -rf ./dist",
     "test": "vitest --run",
@@ -35,7 +35,7 @@
     "zod": "^4.0.17"
   },
   "amdName": "entity",
-  "main": "dist/entity.js",
+  "main": "dist/entity.cjs",
   "module": "dist/entity.module.js",
   "types": "dist/index.d.ts",
   "umd:main": "dist/entity.umd.js",
@@ -46,7 +46,15 @@
       "types": "./dist/index.d.ts",
       "umd": "./dist/entity.umd.js",
       "import": "./dist/entity.mjs",
-      "require": "./dist/entity.js"
+      "require": "./dist/entity.cjs"
     }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "resolutions": {
+    "picomatch": "2.3.1"
   }
 }

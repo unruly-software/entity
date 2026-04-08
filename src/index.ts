@@ -1,1 +1,1 @@
-export {}
+export * as Entity from './bundle'
